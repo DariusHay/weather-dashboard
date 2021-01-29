@@ -27,7 +27,7 @@ searchBtn.on("click", function(){
     
 
 var city = userSearch.val().trim()    
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=c4d189dbd561321cb5a567d4c5e8970b";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=c4d189dbd561321cb5a567d4c5e8970b";
 
 $.ajax({
     url: queryURL,
@@ -81,7 +81,7 @@ $.ajax({
         todayDiv.attr("style", "margin: 7%")
         var iconCode = response.weather[0].icon;
         var icontop = $("<img>");
-        icontop.attr("src", "http://openweathermap.org/img/wn/" + iconCode + "@2x.png");
+        icontop.attr("src", "https://openweathermap.org/img/wn/" + iconCode + "@2x.png");
         icontop.attr("style", "background-color: #2196F3; border-radius: 10px; margin: 1%");
         info = "<br>" + "Temperature: " + temp + " F" + "<br>" + "Humidity: " + response.main.humidity + "%" + "<br>"
          + "Wind speed: " + response.wind.speed + " MPH";
@@ -92,7 +92,7 @@ $.ajax({
         todayDiv.append(info);
 
         contentArea.append(todayDiv);
-        var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + 
+        var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + 
         "&appid=c4d189dbd561321cb5a567d4c5e8970b";
         $.ajax({
             url: queryURL3,
@@ -135,7 +135,7 @@ $.ajax({
                     console.log(tempFa) 
                     var iconc = response.daily[0].weather[0].icon;
                     var iconOne = $("<img>");
-                    iconOne.attr("src", "http://openweathermap.org/img/wn/" + iconc + "@2x.png");
+                    iconOne.attr("src", "https://openweathermap.org/img/wn/" + iconc + "@2x.png");
                     p1 = oneAhead + "<br>" + "Temp: " + tempFa + " F" + "<br>" + "Humidity: " + response.daily[0].humidity
                      + "%";
                     console.log(p1);
@@ -147,7 +147,7 @@ $.ajax({
                     tempFah = tempFah.toFixed(1);
                     var iconco = response.daily[1].weather[0].icon;
                     var iconTwo = $("<img>");
-                    iconTwo.attr("src", "http://openweathermap.org/img/wn/" + iconco + "@2x.png");
+                    iconTwo.attr("src", "https://openweathermap.org/img/wn/" + iconco + "@2x.png");
                     p2 = twoAhead + "<br>" + "Temp: " + tempFah + " F" + "<br>" + "Humidity: " + response.daily[1].humidity
                      + "%";
                      day2.append(p2);
@@ -157,7 +157,7 @@ $.ajax({
                      tempFahr = tempFahr.toFixed(1);
                      var iconcod = response.daily[2].weather[0].icon;
                     var iconThree = $("<img>");
-                    iconThree.attr("src", "http://openweathermap.org/img/wn/" + iconcod + "@2x.png");
+                    iconThree.attr("src", "https://openweathermap.org/img/wn/" + iconcod + "@2x.png");
                     p3 = threeAhead + "<br>" + "Temp: " + tempFahr + " F" + "<br>" + "Humidity: " + response.daily[2].humidity
                     + "%";
                     day3.append(p3);
@@ -167,7 +167,7 @@ $.ajax({
                     tempFahre = tempFahre.toFixed(1);
                     var iconcode4 = response.daily[3].weather[0].icon;
                    var iconFour = $("<img>");
-                   iconFour.attr("src", "http://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
+                   iconFour.attr("src", "https://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
                    p4 = fourAhead + "<br>" + "Temp: " + tempFahre + " F" + "<br>" + "Humidity: " + response.daily[3].humidity
                    + "%";
                    day4.append(p4);
@@ -177,7 +177,7 @@ $.ajax({
                   tempFahren = tempFahren.toFixed(1);
                   var iconcode5 = response.daily[4].weather[0].icon;
                  var iconFive = $("<img>");
-                 iconFive.attr("src", "http://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
+                 iconFive.attr("src", "https://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
                  p5 = fiveAhead + "<br>" + "Temp: " + tempFahren + " F" + "<br>" + "Humidity: " + response.daily[4].humidity
                  + "%";
                  day5.append(p5);
@@ -219,7 +219,7 @@ $(document).on("click", ".newSearch", function() {
     day5.empty();
     var city = $(this)[0].firstChild.data;
     console.log(city);
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=c4d189dbd561321cb5a567d4c5e8970b";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=c4d189dbd561321cb5a567d4c5e8970b";
 
 $.ajax({
     url: queryURL,
@@ -251,7 +251,7 @@ $.ajax({
         todayDiv.attr("style", "margin: 7%")
         var iconCode = response.weather[0].icon;
         var icontop = $("<img>");
-        icontop.attr("src", "http://openweathermap.org/img/wn/" + iconCode + "@2x.png");
+        icontop.attr("src", "https://openweathermap.org/img/wn/" + iconCode + "@2x.png");
         icontop.attr("style", "background-color: #2196F3; border-radius: 10px; margin: 1%");
         info = "<br>" + "Temperature: " + temp + " F" + "<br>" + "Humidity: " + response.main.humidity + "%" + "<br>"
          + "Wind speed: " + response.wind.speed + " MPH";
@@ -262,7 +262,7 @@ $.ajax({
         todayDiv.append(info);
 
         contentArea.append(todayDiv);
-        var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + 
+        var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + 
         "&appid=c4d189dbd561321cb5a567d4c5e8970b";
         $.ajax({
             url: queryURL3,
@@ -305,7 +305,7 @@ $.ajax({
                     console.log(tempFa) 
                     var iconc = response.daily[0].weather[0].icon;
                     var iconOne = $("<img>");
-                    iconOne.attr("src", "http://openweathermap.org/img/wn/" + iconc + "@2x.png");
+                    iconOne.attr("src", "https://openweathermap.org/img/wn/" + iconc + "@2x.png");
                     p1 = oneAhead + "<br>" + "Temp: " + tempFa + " F" + "<br>" + "Humidity: " + response.daily[0].humidity
                      + "%";
                     console.log(p1);
@@ -317,7 +317,7 @@ $.ajax({
                     tempFah = tempFah.toFixed(1);
                     var iconco = response.daily[1].weather[0].icon;
                     var iconTwo = $("<img>");
-                    iconTwo.attr("src", "http://openweathermap.org/img/wn/" + iconco + "@2x.png");
+                    iconTwo.attr("src", "https://openweathermap.org/img/wn/" + iconco + "@2x.png");
                     p2 = twoAhead + "<br>" + "Temp: " + tempFah + " F" + "<br>" + "Humidity: " + response.daily[1].humidity
                      + "%";
                      day2.append(p2);
@@ -327,7 +327,7 @@ $.ajax({
                      tempFahr = tempFahr.toFixed(1);
                      var iconcod = response.daily[2].weather[0].icon;
                     var iconThree = $("<img>");
-                    iconThree.attr("src", "http://openweathermap.org/img/wn/" + iconcod + "@2x.png");
+                    iconThree.attr("src", "https://openweathermap.org/img/wn/" + iconcod + "@2x.png");
                     p3 = threeAhead + "<br>" + "Temp: " + tempFahr + " F" + "<br>" + "Humidity: " + response.daily[2].humidity
                     + "%";
                     day3.append(p3);
@@ -337,7 +337,7 @@ $.ajax({
                     tempFahre = tempFahre.toFixed(1);
                     var iconcode4 = response.daily[3].weather[0].icon;
                    var iconFour = $("<img>");
-                   iconFour.attr("src", "http://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
+                   iconFour.attr("src", "https://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
                    p4 = fourAhead + "<br>" + "Temp: " + tempFahre + " F" + "<br>" + "Humidity: " + response.daily[3].humidity
                    + "%";
                    day4.append(p4);
@@ -347,7 +347,7 @@ $.ajax({
                   tempFahren = tempFahren.toFixed(1);
                   var iconcode5 = response.daily[4].weather[0].icon;
                  var iconFive = $("<img>");
-                 iconFive.attr("src", "http://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
+                 iconFive.attr("src", "https://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
                  p5 = fiveAhead + "<br>" + "Temp: " + tempFahren + " F" + "<br>" + "Humidity: " + response.daily[4].humidity
                  + "%";
                  day5.append(p5);
