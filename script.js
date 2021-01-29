@@ -23,6 +23,7 @@ searchBtn.on("click", function(){
     day3.empty();
     day4.empty();
     day5.empty();
+    searchHistBtn.attr("style", "visibility: visible")
     
 
 var city = userSearch.val().trim()    
