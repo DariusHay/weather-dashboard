@@ -141,3 +141,9 @@ h3 {
     margin-top: 1%;
     
 }
+.newSearch {
+    width: 75%;
+    margin: 2%;
+    background-color: #2196F3;
+    color: white;
+}
