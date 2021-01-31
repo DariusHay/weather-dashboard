@@ -82,16 +82,6 @@ searchBtn.on("click", function () {
             var tempK = response.main.temp
             var tempF = ((tempK - 273.15) * 1.8) + 32
             var time = moment().format("LL");
-            // var nextDay = moment().add(1, 'd');
-            // var twoDays = moment().add(2, 'd');
-            // var threeDays = moment().add(3, 'd');
-            // var fourDays = moment().add(4, 'd');
-            // var fiveDays = moment().add(5, 'd');
-            // var oneAhead = nextDay.format("LL");
-            // var twoAhead = twoDays.format("LL");
-            // var threeAhead = threeDays.format("LL");
-            // var fourAhead = fourDays.format("LL");
-            // var fiveAhead = fiveDays.format("LL");
             var todayDiv = $("<div>");
             var cityName = $("<h2>");
             var info = $("<p>");
@@ -152,10 +142,6 @@ searchBtn.on("click", function () {
                         var newDiv = $("<div>");
                         newDiv.addClass("fiveDay");
                         newDiv.attr("style", "border-radius: 5px; background-color: aliceblue; height: 175px; width: 18%; margin: 1%; color: #2196F3; font-size: small;")
-                        // var p2 = $("<p>");
-                        // var p3 = $("<p>");
-                        // var p4 = $("<p>");
-                        // var p5 = $("<p>");
                         var tempke = response.daily[i].temp.day;
                         var tempFa = ((tempke - 273.15) * 1.8) + 32;
                         tempFa = tempFa.toFixed(1);
@@ -163,9 +149,6 @@ searchBtn.on("click", function () {
                         var iconc = response.daily[i].weather[0].icon;
                         var iconOne = $("<img>");
                         iconOne.attr("src", "https://openweathermap.org/img/wn/" + iconc + "@2x.png");
-                        // var thisDay = response.daily[0].dt
-                        // thisDay = moment(date("m-d-y",thisDay));
-                        // console.log(thisDay);
                         p1 = oneDayAhead + "<br>" + "Temp: " + tempFa + " F" + "<br>" + "Humidity: " + response.daily[0].humidity
                             + "%";
                         console.log(p1);
@@ -174,65 +157,12 @@ searchBtn.on("click", function () {
                         fiveDay.append(newDiv);
                         console.log(response);
                     }
-                    //     var tempkel = response.daily[1].temp.day;
-                    //     var tempFah = ((tempkel-273.15)*1.8)+32;
-                    //     tempFah = tempFah.toFixed(1);
-                    //     var iconco = response.daily[1].weather[0].icon;
-                    //     var iconTwo = $("<img>");
-                    //     iconTwo.attr("src", "https://openweathermap.org/img/wn/" + iconco + "@2x.png");
-                    //     p2 = twoAhead + "<br>" + "Temp: " + tempFah + " F" + "<br>" + "Humidity: " + response.daily[1].humidity
-                    //      + "%";
-                    //      day2.append(p2);
-                    //      day2.append(iconTwo);
-                    //      var tempkelv = response.daily[2].temp.day;
-                    //      var tempFahr = ((tempkelv-273.15)*1.8)+32;
-                    //      tempFahr = tempFahr.toFixed(1);
-                    //      var iconcod = response.daily[2].weather[0].icon;
-                    //     var iconThree = $("<img>");
-                    //     iconThree.attr("src", "https://openweathermap.org/img/wn/" + iconcod + "@2x.png");
-                    //     p3 = threeAhead + "<br>" + "Temp: " + tempFahr + " F" + "<br>" + "Humidity: " + response.daily[2].humidity
-                    //     + "%";
-                    //     day3.append(p3);
-                    //     day3.append(iconThree);
-                    //     var tempkelvi = response.daily[3].temp.day;
-                    //     var tempFahre = ((tempkelvi-273.15)*1.8)+32;
-                    //     tempFahre = tempFahre.toFixed(1);
-                    //     var iconcode4 = response.daily[3].weather[0].icon;
-                    //    var iconFour = $("<img>");
-                    //    iconFour.attr("src", "https://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
-                    //    p4 = fourAhead + "<br>" + "Temp: " + tempFahre + " F" + "<br>" + "Humidity: " + response.daily[3].humidity
-                    //    + "%";
-                    //    day4.append(p4);
-                    //    day4.append(iconFour);
-                    //   var tempkelvin = response.daily[4].temp.day;
-                    //   var tempFahren = ((tempkelvin-273.15)*1.8)+32;
-                    //   tempFahren = tempFahren.toFixed(1);
-                    //   var iconcode5 = response.daily[4].weather[0].icon;
-                    //  var iconFive = $("<img>");
-                    //  iconFive.attr("src", "https://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
-                    //  p5 = fiveAhead + "<br>" + "Temp: " + tempFahren + " F" + "<br>" + "Humidity: " + response.daily[4].humidity
-                    //  + "%";
-                    //  day5.append(p5);
-                    //  day5.append(iconFive);
-
-
-
-
-
-
-
-
-
 
                 });
         }, error: forecastHead.text("Please choose a city (Check your spelling)")
 
 
     })
-
-
-
-
 
     newCity();
 
@@ -246,12 +176,6 @@ function newCity() {
 $(document).on("click", ".newSearch", function () {
     contentArea.empty();
     $(".fiveDay").remove();
-    // day1.empty();
-    // day2.empty();
-    // day3.empty();
-    // day4.empty();
-    // day5.empty();
-    //var city = $(this)[0].firstChild.data;
     var city = $(this).attr("data-name");
     console.log(city);
     console.log(city);
@@ -268,16 +192,6 @@ $(document).on("click", ".newSearch", function () {
             var tempK = response.main.temp
             var tempF = ((tempK - 273.15) * 1.8) + 32
             var time = moment().format("LL");
-            // var nextDay = moment().add(1, 'd');
-            // var twoDays = moment().add(2, 'd');
-            // var threeDays = moment().add(3, 'd');
-            // var fourDays = moment().add(4, 'd');
-            // var fiveDays = moment().add(5, 'd');
-            // var oneAhead = nextDay.format("LL");
-            // var twoAhead = twoDays.format("LL");
-            // var threeAhead = threeDays.format("LL");
-            // var fourAhead = fourDays.format("LL");
-            // var fiveAhead = fiveDays.format("LL");
             var todayDiv = $("<div>");
             var cityName = $("<h2>");
             var info = $("<p>");
@@ -338,10 +252,6 @@ $(document).on("click", ".newSearch", function () {
                         var newDiv = $("<div>");
                         newDiv.addClass("fiveDay");
                         newDiv.attr("style", "border-radius: 5px; background-color: aliceblue; height: 175px; width: 18%; margin: 1%; color: #2196F3; font-size: small;")
-                        // var p2 = $("<p>");
-                        // var p3 = $("<p>");
-                        // var p4 = $("<p>");
-                        // var p5 = $("<p>");
                         var tempke = response.daily[i].temp.day;
                         var tempFa = ((tempke - 273.15) * 1.8) + 32;
                         tempFa = tempFa.toFixed(1);
@@ -349,9 +259,6 @@ $(document).on("click", ".newSearch", function () {
                         var iconc = response.daily[i].weather[0].icon;
                         var iconOne = $("<img>");
                         iconOne.attr("src", "https://openweathermap.org/img/wn/" + iconc + "@2x.png");
-                        // var thisDay = response.daily[0].dt
-                        // thisDay = moment(date("m-d-y",thisDay));
-                        // console.log(thisDay);
                         p1 = oneDayAhead + "<br>" + "Temp: " + tempFa + " F" + "<br>" + "Humidity: " + response.daily[0].humidity
                             + "%";
                         console.log(p1);
@@ -360,74 +267,6 @@ $(document).on("click", ".newSearch", function () {
                         fiveDay.append(newDiv);
                         console.log(response);
                     }
-
-                    //     var p1 = $("<p>");
-                    //     var p2 = $("<p>");
-                    //     var p3 = $("<p>");
-                    //     var p4 = $("<p>");
-                    //     var p5 = $("<p>");
-                    //     var tempke = response.daily[0].temp.day;
-                    //     var tempFa = ((tempke-273.15)*1.8)+32;
-                    //     tempFa = tempFa.toFixed(1);
-                    //     console.log(tempFa) 
-                    //     var iconc = response.daily[0].weather[0].icon;
-                    //     var iconOne = $("<img>");
-                    //     iconOne.attr("src", "https://openweathermap.org/img/wn/" + iconc + "@2x.png");
-                    //     p1 = oneAhead + "<br>" + "Temp: " + tempFa + " F" + "<br>" + "Humidity: " + response.daily[0].humidity
-                    //      + "%";
-                    //     console.log(p1);
-                    //     day1.append(p1)
-                    //     day1.append(iconOne);
-                    //     console.log(response);
-                    //     var tempkel = response.daily[1].temp.day;
-                    //     var tempFah = ((tempkel-273.15)*1.8)+32;
-                    //     tempFah = tempFah.toFixed(1);
-                    //     var iconco = response.daily[1].weather[0].icon;
-                    //     var iconTwo = $("<img>");
-                    //     iconTwo.attr("src", "https://openweathermap.org/img/wn/" + iconco + "@2x.png");
-                    //     p2 = twoAhead + "<br>" + "Temp: " + tempFah + " F" + "<br>" + "Humidity: " + response.daily[1].humidity
-                    //      + "%";
-                    //      day2.append(p2);
-                    //      day2.append(iconTwo);
-                    //      var tempkelv = response.daily[2].temp.day;
-                    //      var tempFahr = ((tempkelv-273.15)*1.8)+32;
-                    //      tempFahr = tempFahr.toFixed(1);
-                    //      var iconcod = response.daily[2].weather[0].icon;
-                    //     var iconThree = $("<img>");
-                    //     iconThree.attr("src", "https://openweathermap.org/img/wn/" + iconcod + "@2x.png");
-                    //     p3 = threeAhead + "<br>" + "Temp: " + tempFahr + " F" + "<br>" + "Humidity: " + response.daily[2].humidity
-                    //     + "%";
-                    //     day3.append(p3);
-                    //     day3.append(iconThree);
-                    //     var tempkelvi = response.daily[3].temp.day;
-                    //     var tempFahre = ((tempkelvi-273.15)*1.8)+32;
-                    //     tempFahre = tempFahre.toFixed(1);
-                    //     var iconcode4 = response.daily[3].weather[0].icon;
-                    //    var iconFour = $("<img>");
-                    //    iconFour.attr("src", "https://openweathermap.org/img/wn/" + iconcode4 + "@2x.png");
-                    //    p4 = fourAhead + "<br>" + "Temp: " + tempFahre + " F" + "<br>" + "Humidity: " + response.daily[3].humidity
-                    //    + "%";
-                    //    day4.append(p4);
-                    //    day4.append(iconFour);
-                    //   var tempkelvin = response.daily[4].temp.day;
-                    //   var tempFahren = ((tempkelvin-273.15)*1.8)+32;
-                    //   tempFahren = tempFahren.toFixed(1);
-                    //   var iconcode5 = response.daily[4].weather[0].icon;
-                    //  var iconFive = $("<img>");
-                    //  iconFive.attr("src", "https://openweathermap.org/img/wn/" + iconcode5 + "@2x.png");
-                    //  p5 = fiveAhead + "<br>" + "Temp: " + tempFahren + " F" + "<br>" + "Humidity: " + response.daily[4].humidity
-                    //  + "%";
-                    //  day5.append(p5);
-                    //  day5.append(iconFive);
-
-
-
-
-
-
-
-
-
 
                 });
 
