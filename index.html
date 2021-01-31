@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-  />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 
 </head>
+
 <body>
     <header>
         Weather Dashboard
     </header>
     <div class="container" id="left">
-    <h4>Search for a City</h4>
-    <div id="searchbox">
-    <input type="search" placeholder="Search.."><button id="searchbutton" type="submit"><i class="fa fa-search"></i></button></div>
-    <section>
-        <h3>Search History</h3>
-        <hr>
-        
-    </section>
-</div>
-<div class="container" id="right">
-    <main class="row">
-        <div id="weatherInfoArea"></div>
-    </main>
+        <h4>Search for a City</h4>
+        <div id="searchbox">
+            <input type="search" placeholder="Search.."><button id="searchbutton" type="submit"><i
+                    class="fa fa-search"></i></button></div>
+        <section>
+            <h3>Search History</h3>
+            <hr>
+            <div id="searchBtns"></div>
+        </section>
+    </div>
+    <div class="container" id="right">
+        <main class="row">
+            <div id="weatherInfoArea"></div>
+        </main>
 
-    <h3 id="forecastHeader"></h3>
+        <h3 id="forecastHeader"></h3>
         <hr id="line">
-  
-    <div class="row" id="forecast">
-        <div id="dayOne"></div>
+
+        <div class="row" id="forecast">
+            <!-- <div id="dayOne"></div>
         <div id="dayTwo"></div>
         <div id="dayThree"></div>
         <div id="dayFour"></div>
-        <div id="dayFive"></div>
+        <div id="dayFive"></div> -->
+
+        </div>
+        
 
     </div>
 
-    
-</div>
-
-    </main>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
