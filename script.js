@@ -41,7 +41,14 @@ function createSearchBtns() {
 
 }
 
-searchBtn.on("click", function () {
+searchBtn.on("click", letsGo);
+document.body.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+        letsGo();
+    }
+})
+
+function letsGo () {
 
     contentArea.empty();
     day1.empty();
@@ -166,7 +173,7 @@ searchBtn.on("click", function () {
 
     newCity();
 
-})
+}
 
 function newCity() {
 
